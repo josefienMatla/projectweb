@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* koekjes*/
+
+body {
+    background: #92A9B9;
+}
+
+nav:first-child {
+    background-color: #84B1DB;
+    max-height: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav:first-child ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+
+}
+li {
+    margin: 15px;
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+nav li img {
+    width: 2em;
+}
+
+nav:last-child {
+    background-color: white;
+
+
+}
+
+nav:last-child ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    overflow-x: scroll;
+}
+
+.nav-img {
+    max-width: 100%;
+    z-index: 999;
+    min-height: 8rem;
+}
+
+
+.banner {
+    width: 100vw;
+    height: auto;
+}
+
+section {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 2em;
+    transition: all ease-in. 3s;
+
+}
+
+
+article {
+    background-color: white;
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: row;
+}
+
+
+article img{
+     height: 100%;
+}
+
+article p{
+    margin: 40px 0 0 10px;
+
+}
+
+article:hover {
+    background-color: #FF8000;
+}
+
+nav li:hover {
+     background-color: #FF8000;
+}
+
+.test{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.test li{margin: 0px 20px 0px 20px;}
+
+
+
+button{
+    background-color: #84B1DB;
+    margin-top: 150px;
+    margin-left: 40px;
+    font-size: 20px
+}
+
