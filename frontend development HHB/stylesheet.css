@@ -12,11 +12,12 @@ body {
 }
 
 nav:first-child {
+    position: fixed;
+    width: 100%;
     background-color: #84B1DB;
-    max-height: 4rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
-
 }
 
 nav:first-child ul {
@@ -24,11 +25,11 @@ nav:first-child ul {
     justify-content: flex-end;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
-
 }
+
 li {
     margin: 15px;
     list-style-type: none;
@@ -41,8 +42,6 @@ nav li img {
 
 nav:last-child {
     background-color: white;
-
-
 }
 
 nav:last-child ul {
@@ -53,9 +52,10 @@ nav:last-child ul {
 }
 
 .nav-img {
-    max-width: 100%;
+    max-width: 25%;
     z-index: 999;
-    min-height: 8rem;
+    height: 100%;
+    width: auto;
 }
 
 
@@ -67,12 +67,17 @@ nav:last-child ul {
 section {
     display: grid;
     margin: auto;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
     grid-gap: 2em;
-    transition: all ease-in. 3s;
 
+    /* waarom is deze sulotion op de section*/
+    transition: all ease-in. 3s;
 }
 
+section a {
+    max-width: 100vw;
+}
 
 article {
     background-color: white;
@@ -80,41 +85,94 @@ article {
     font-weight: bold;
     border: 2px solid grey;
     display: flex;
-    flex-direction: row;
+    transition: transform 0.3s;
+    margin: 0px 5px 0px 5px;
 }
 
 
-article img{
-     height: 100%;
+article img {
+    height: 100%;
 }
 
-article p{
+article p {
     margin: 40px 0 0 10px;
-
 }
 
-article:hover {
+/* hier geef ik met transform aan dat die doormiddel van een scale van 1.5 groter kan worden*/
+/*met de box schadow geef ik aan hoe groot de schaduw moet zijn zo kun je en welke kleur*/
+article:hover,
+article:focus {
+    background-color: #FF8000;
+    box-shadow: 0px 6px 10px 0px #666666;
+    transform: scale(1.1);
+}
+
+nav li:hover,
+nav li:focus {
     background-color: #FF8000;
 }
 
-nav li:hover {
-     background-color: #FF8000;
-}
-
-.test{
+.test {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
 }
 
-.test li{margin: 0px 20px 0px 20px;}
-
-
-
-button{
-    background-color: #84B1DB;
-    margin-top: 150px;
-    margin-left: 40px;
-    font-size: 20px
+.test li {
+    margin: 0px 20px 0px 20px;
 }
+
+
+
+.knop:hover {
+    background-color: white;
+}
+
+
+/* ik geef hier aan dat mijn afbeelding in mijn artikel gevuld wordt op de hoogte en de breedte, en hij mag niet breder worden dna 50% van mijn artikel daarom die 50%*/
+article img {
+    object-fit: cover;
+    width: 50%;
+}
+
+
+.dropdown2{
+    background-color: dodgerblue;
+    color: white;
+    font-size: 16px;
+
+
+
+}
+
+
+.dropdown2:hover, .dropdown2:focus{
+    background-color: #FF8000;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-inhoud{
+    position: absolute;
+    background-color: #84B1DB;
+    z-index: 1;
+    min-height: 16px;
+}
+
+.dropdown-inhoud a{
+    color: white;
+}
+
+.dropdown-inhoud a:hover, .dropdown-inhoud a:focus{
+    background-color: #FF8000;
+}
+
+.show{
+    display: block;
+}
+
 
